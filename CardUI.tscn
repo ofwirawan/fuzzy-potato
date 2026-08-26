@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://4axkbn3tvsvj"]
+
+[ext_resource type="Script" uid="uid://cxy3p4vj37r6o" path="res://scripts/CardUI.gd" id="1_huidv"]
+
+[node name="Player2D" type="Area2D" unique_id=968528784]
+script = ExtResource("1_huidv")
