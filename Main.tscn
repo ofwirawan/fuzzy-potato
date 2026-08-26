@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://cpfg3ap38w4js"]
+
+[ext_resource type="Script" uid="uid://kn4ph3pi60jj" path="res://scripts/GameManager.gd" id="1_r0du0"]
+[ext_resource type="Script" uid="uid://cdphefce42ued" path="res://scripts/DeckManager.gd" id="2_cm0pq"]
+
+[node name="Main" type="Control" unique_id=1506049197]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r0du0")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1471482999]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(28.6, 16.04)
+
+[node name="DeckManager" type="Node" parent="." unique_id=222054703]
+script = ExtResource("2_cm0pq")
+
+[node name="UI" type="Control" parent="." unique_id=882035228]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="StatusLabel" type="Label" parent="UI" unique_id=1899728506]
+layout_mode = 0
+offset_left = 544.0
+offset_top = 296.0
+offset_right = 584.0
+offset_bottom = 319.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="PlayerScoreLabel" type="Label" parent="UI" unique_id=178853657]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 457.0
+offset_right = 125.0
+offset_bottom = 480.0
+theme_override_colors/font_color = Color(0.099985994, 0.099985994, 0.099985994, 1)
+
+[node name="DealerScoreLabel" type="Label" parent="UI" unique_id=352973652]
+layout_mode = 0
+offset_left = 995.0
+offset_top = 77.0
+offset_right = 1035.0
+offset_bottom = 100.0
+theme_override_colors/font_color = Color(0.06262199, 0.06262199, 0.06262199, 1)
+
+[node name="PlayerHand" type="HBoxContainer" parent="UI" unique_id=1340529088]
+layout_mode = 0
+offset_left = 327.0
+offset_top = 552.0
+offset_right = 367.0
+offset_bottom = 592.0
+alignment = 1
+
+[node name="DealerHand" type="HBoxContainer" parent="UI" unique_id=2025633358]
+layout_mode = 0
+offset_left = 555.0
+offset_top = 30.0
+offset_right = 595.0
+offset_bottom = 70.0
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI" unique_id=659446753]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HitButton" type="Button" parent="UI/HBoxContainer" unique_id=1406218506]
+layout_mode = 2
+text = "Hit"
+
+[node name="StandButton" type="Button" parent="UI/HBoxContainer" unique_id=1300901826]
+layout_mode = 2
+text = "Stand"
+
+[node name="RestartButton" type="Button" parent="UI/HBoxContainer" unique_id=64279561]
+layout_mode = 2
+text = "Restart"

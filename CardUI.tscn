@@ -2,5 +2,28 @@
 
 [ext_resource type="Script" uid="uid://cxy3p4vj37r6o" path="res://scripts/CardUI.gd" id="1_huidv"]
 
-[node name="Player2D" type="Area2D" unique_id=968528784]
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_uu6xs"]
+size = Vector2(100, 140)
+
+[node name="CardUI" type="Control" unique_id=1502839753]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_huidv")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1987337197]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("PlaceholderTexture2D_uu6xs")
+expand_mode = 3
+
+[node name="ValueLabel" type="Label" parent="." unique_id=257521001]
+layout_mode = 1
+offset_right = 1.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1
