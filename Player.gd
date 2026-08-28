@@ -32,6 +32,7 @@ func _init(p_id: int, p_name: String, p_container: Container = null, p_label: La
 
 func reset_round() -> void:
 	hand.clear()
+	is_dealer = false
 	is_eliminated = false
 	_clear_ui_container()
 	update_score_display(-1)
@@ -67,6 +68,12 @@ func reveal_hand() -> void:
 				card_ui.set_card(hand[i], false)
 
 
+func refresh_hand_visuals(face_down: bool = true) -> void:
+	_clear_ui_container()
+	for card in hand:
+		_instantiate_card_ui(card, face_down)
+
+
 func update_score_display(score: int) -> void:
 	if not score_label: return
 	
@@ -93,4 +100,4 @@ func _instantiate_card_ui(card: CardData, face_down: bool) -> void:
 func _clear_ui_container() -> void:
 	if not container: return
 	for child in container.get_children():
-		child.queue_free()
+		child.free()

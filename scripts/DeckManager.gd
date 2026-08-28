@@ -4,6 +4,9 @@ extends Node
 @export var card_textures: Array[Texture2D] # Assign 52 textures in Inspector
 var cards: Array[CardData] = []
 
+func reset_deck() -> void:
+	initialize_deck()
+
 func initialize_deck():
 	cards.clear()
 	var texture_index = 0
