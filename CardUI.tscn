@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://cxy3p4vj37r6o" path="res://scripts/CardUI.gd" id="1_huidv"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_uu6xs"]
-size = Vector2(100, 140)
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_huidv"]
+load_path = "res://.godot/imported/HeartAce.png-a36bc0e4d1f39d9dd25346f8adc88863.ctex"
 
 [node name="CardUI" type="Control" unique_id=1502839753]
 layout_mode = 3
@@ -18,8 +18,8 @@ script = ExtResource("1_huidv")
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
-texture = SubResource("PlaceholderTexture2D_uu6xs")
-expand_mode = 3
+texture = SubResource("CompressedTexture2D_huidv")
+stretch_mode = 2
 
 [node name="ValueLabel" type="Label" parent="." unique_id=257521001]
 layout_mode = 1
